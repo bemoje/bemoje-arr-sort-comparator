@@ -6,12 +6,14 @@ let arr
  * DATA: STRINGS
  * --------------
  */
+
 arr = ['5', '2', '4', '30', '1', '3']
 
 /**
  * SORT ALPHABETICALLY BY DEFAULT
  * ------------------------------
  */
+
 arr.sort(compare())
 //=> ['1', '2', '3', '30', '4', '5']
 
@@ -19,6 +21,7 @@ arr.sort(compare())
  * DATA: NUMERIC VALUES
  * ----------------------
  */
+
 arr = [5, 2, 4, 30, 1, 3]
 
 /**
@@ -37,6 +40,7 @@ arr.sort(
  * SORT DESCENDING
  * ---------------
  */
+
 arr.sort(
 	compare({
 		numeric: true,
@@ -49,6 +53,7 @@ arr.sort(
  * DATA: PERSON OBJECTS
  * --------------------
  */
+
 arr = [
 	{ name: 'john', age: 4 },
 	{ name: 'bill', age: 8 },
@@ -58,11 +63,13 @@ arr = [
  * SORT OBJECTS BY PROPERTY
  * ------------------------
  */
+
 arr.sort(
 	compare({
 		by: 'name',
 	}),
 )
+
 /* =>
 	[
 		{ name: 'bill', age: 8 },
@@ -76,6 +83,7 @@ arr.sort(
 		by: 'age',
 	}),
 )
+
 /* =>
 	[
 		{ name: 'john', age: 4 },
@@ -87,6 +95,7 @@ arr.sort(
  * DATA: PERSON OBJECTS WITH NESTED NAME OBJECTS
  * ---------------------------------------------
  */
+
 arr = [
 	{ id: 0, name: { first: 'snoop', last: 'doggy' } },
 	{ id: 1, name: { first: 'kurt', last: 'qobain' } },
@@ -96,11 +105,13 @@ arr = [
  * SORT OBJECTS BY NESTED PROPERTY WITH DOT NOTATION
  * -------------------------------------------------
  */
+
 arr.sort(
 	compare({
 		by: 'name.first',
 	}),
 )
+
 /* =>
 	[
 		{ id: 1, name: { first: 'kurt', last: 'qobain' } },
@@ -113,6 +124,7 @@ arr.sort(
 		by: 'name.last',
 	}),
 )
+
 /* =>
 	[
 		{ id: 0, name: { first: 'snoop', last: 'doggy' } },
@@ -134,11 +146,13 @@ arr = [
  * SORT BY ARRAY INDEX
  * -------------------
  */
+
 arr.sort(
 	compare({
 		by: 2,
 	}),
 )
+
 /* =>
 	[
 		['repo', 'src', 'compare.js'],
@@ -151,6 +165,7 @@ arr.sort(
 		by: 1,
 	}),
 )
+
 /* =>
 	[
 		['repo', 'docs', 'index.html' ],
@@ -173,11 +188,13 @@ arr = [
  * SORT ARRAYS AND SUB-ARRAYS RECURSIVELY
  * ------------------------------------
  */
+
 arr.sort(
 	compare({
 		arrays: true,
 	}),
 )
+
 /* =>
 	[
 		['repo', 'src', ['compare', 'js']],
@@ -208,6 +225,7 @@ arr.sort(
 		arrays: true,
 	}),
 )
+
 /* =>
 	[
 		[172, 0, 0, 1],
@@ -220,6 +238,7 @@ arr.sort(
  * DATA: USER CLASS INSTANCES
  * --------------------------
  */
+
 class User {
 	constructor(firstName, lastName) {
 		this.firstName = firstName
@@ -249,6 +268,7 @@ arr.sort(
 		},
 	}),
 )
+
 /* =>
 	[
 		{ firstName: 'john', lastName: 'doe'},

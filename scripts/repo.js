@@ -331,7 +331,11 @@ const repo = new (class {
 						/ from '(.+)'/,
 						" from '" + fullName + "'",
 					)
-					return lines.join('\n')
+					return lines
+						.map((line) => {
+							return line.replace('\t', '  ')
+						})
+						.join('\n')
 				})
 				.join('\n\n'),
 			'```',
