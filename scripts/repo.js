@@ -369,7 +369,6 @@ const repo = new (class {
 		const apiPath = path.join(process.cwd(), 'docs', 'api.md')
 		if (fs.existsSync(apiPath)) {
 			let lines = splitLines(this.readFile(apiPath))
-			lines.shift()
 			lines = lines
 				.map((line) => {
 					if (line.includes('###')) {

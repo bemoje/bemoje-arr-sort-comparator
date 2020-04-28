@@ -1,6 +1,6 @@
 {
    "name": "@bemoje/arr-sort-comparator",
-   "version": "1.0.3",
+   "version": "1.0.4",
    "description": "Create array comparator function.",
    "main": "dist/arr-sort-comparator.umd.js",
    "module": "dist/arr-sort-comparator.esm.js",
