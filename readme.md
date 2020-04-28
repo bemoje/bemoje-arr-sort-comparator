@@ -69,7 +69,7 @@ arr = [5, 2, 4, 30, 1, 3]
 
 arr.sort(
   compare({
-  	numeric: true,
+    numeric: true,
   }),
 )
 //=> [1, 2, 3, 4, 5, 30]
@@ -81,8 +81,8 @@ arr.sort(
 
 arr.sort(
   compare({
-  	numeric: true,
-  	descending: true,
+    numeric: true,
+    descending: true,
   }),
 )
 //=> [30, 5, 4, 3, 2, 1]
@@ -104,28 +104,28 @@ arr = [
 
 arr.sort(
   compare({
-  	by: 'name',
+    by: 'name',
   }),
 )
 
 /* =>
   [
-  	{ name: 'bill', age: 8 },
-  	{ name: 'john', age: 4 },
+    { name: 'bill', age: 8 },
+    { name: 'john', age: 4 },
   ]
 */
 
 arr.sort(
   compare({
-  	numeric: true,
-  	by: 'age',
+    numeric: true,
+    by: 'age',
   }),
 )
 
 /* =>
   [
-  	{ name: 'john', age: 4 },
-  	{ name: 'bill', age: 8 },
+    { name: 'john', age: 4 },
+    { name: 'bill', age: 8 },
   ]
 */
 
@@ -146,27 +146,27 @@ arr = [
 
 arr.sort(
   compare({
-  	by: 'name.first',
+    by: 'name.first',
   }),
 )
 
 /* =>
   [
-  	{ id: 1, name: { first: 'kurt', last: 'qobain' } },
-  	{ id: 0, name: { first: 'snoop', last: 'doggy' } },
+    { id: 1, name: { first: 'kurt', last: 'qobain' } },
+    { id: 0, name: { first: 'snoop', last: 'doggy' } },
   ]
 */
 
 arr.sort(
   compare({
-  	by: 'name.last',
+    by: 'name.last',
   }),
 )
 
 /* =>
   [
-  	{ id: 0, name: { first: 'snoop', last: 'doggy' } },
-  	{ id: 1, name: { first: 'kurt', last: 'qobain' } },
+    { id: 0, name: { first: 'snoop', last: 'doggy' } },
+    { id: 1, name: { first: 'kurt', last: 'qobain' } },
   ]
 */
 
@@ -187,27 +187,27 @@ arr = [
 
 arr.sort(
   compare({
-  	by: 2,
+    by: 2,
   }),
 )
 
 /* =>
   [
-  	['repo', 'src', 'compare.js'],
-  	['repo', 'docs', 'index.html'],
+    ['repo', 'src', 'compare.js'],
+    ['repo', 'docs', 'index.html'],
   ]
 */
 
 arr.sort(
   compare({
-  	by: 1,
+    by: 1,
   }),
 )
 
 /* =>
   [
-  	['repo', 'docs', 'index.html' ],
-  	['repo', 'src', 'compare.js'],
+    ['repo', 'docs', 'index.html' ],
+    ['repo', 'src', 'compare.js'],
   ]
 */
 
@@ -229,15 +229,15 @@ arr = [
 
 arr.sort(
   compare({
-  	arrays: true,
+    arrays: true,
   }),
 )
 
 /* =>
   [
-  	['repo', 'src', ['compare', 'js']],
-  	['repo', 'src', ['compare', 'json']],
-  	['repo', 'src', ['compare', 'ts']],
+    ['repo', 'src', ['compare', 'js']],
+    ['repo', 'src', ['compare', 'json']],
+    ['repo', 'src', ['compare', 'ts']],
   ]
 */
 
@@ -259,16 +259,16 @@ arr = [
 
 arr.sort(
   compare({
-  	numeric: true,
-  	arrays: true,
+    numeric: true,
+    arrays: true,
   }),
 )
 
 /* =>
   [
-  	[172, 0, 0, 1],
-  	[192, 168, 0, 1],
-  	[192, 168, 0, 101],
+    [172, 0, 0, 1],
+    [192, 168, 0, 1],
+    [192, 168, 0, 101],
   ]
 */
 
@@ -279,11 +279,11 @@ arr.sort(
 
 class User {
   constructor(firstName, lastName) {
-  	this.firstName = firstName
-  	this.lastName = lastName
+    this.firstName = firstName
+    this.lastName = lastName
   }
   get fullName() {
-  	return this.firstName + ' ' + this.lastName
+    return this.firstName + ' ' + this.lastName
   }
 }
 
@@ -301,18 +301,18 @@ arr = [
 
 arr.sort(
   compare({
-  	by: (user) => {
-  		return user.fullName
-  	},
+    by: (user) => {
+      return user.fullName
+    },
   }),
 )
 
 /* =>
   [
-  	{ firstName: 'john', lastName: 'doe'},
-  	{ firstName: 'les', lastName: 'paul'},
-  	{ firstName: 'peter', lastName: 'johnson'},
-  	{ firstName: 'peter', lastName: 'wick'},
+    { firstName: 'john', lastName: 'doe'},
+    { firstName: 'les', lastName: 'paul'},
+    { firstName: 'peter', lastName: 'johnson'},
+    { firstName: 'peter', lastName: 'wick'},
   ]
 */
 
