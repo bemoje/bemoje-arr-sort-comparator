@@ -333,7 +333,7 @@ const repo = new (class {
 					)
 					return lines
 						.map((line) => {
-							return line.replace('\t', '  ')
+							return line.replace(/\t/g, '  ')
 						})
 						.join('\n')
 				})
