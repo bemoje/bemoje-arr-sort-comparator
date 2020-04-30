@@ -1,6 +1,6 @@
 {
    "name": "@bemoje/arr-sort-comparator",
-   "version": "1.0.4",
+   "version": "1.0.5",
    "description": "Create array comparator function.",
    "main": "dist/arr-sort-comparator.umd.js",
    "module": "dist/arr-sort-comparator.esm.js",
@@ -55,7 +55,7 @@
    },
    "devDependencies": {
       "babel-core": "^6.26.3",
-      "babel-jest": "^25.4.0",
+      "babel-jest": "^25.5.1",
       "babel-preset-env": "^1.7.0",
       "documentation": "^12.3.0",
       "esm": "^3.2.25",
